@@ -1,6 +1,7 @@
-## Dockerfile for Mellon authentication with proxy passthrough
+### Dockerfile for Mellon authentication with proxy passthrough
 
-#### To get this working on a Mac you have to make a separate arrangement for networking.
+This dockerfile will allow you to run a docker instance running `mod_mellon` acting as a SAML Service Provider which proxies to an application on your host machine. I have a simple example using OneLogin's free SAML Identity provider testing service.
+##### To get this working on a Mac you have to make a separate arrangement for networking.
 Docker on Mac OSX does not have a bridge network, we will create a separate IP and your proxied application must be listening on 0.0.0.0, not just localhost.
 
 https://docs.docker.com/docker-for-mac/networking/#/use-cases-and-workarounds
